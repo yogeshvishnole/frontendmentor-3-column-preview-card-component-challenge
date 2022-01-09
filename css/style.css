@@ -1,0 +1,146 @@
+:root {
+  --clr-primary: 31 77% 52%;
+  --clr-secondary: 184 100% 22%;
+  --clr-tertiary: 179 100% 13%;
+
+  --fs-body: 1.5rem;
+
+  --ff-sans: "Lexend Deca", sans-serif;
+  --ff-cursive: "Big Shoulders Display", cursive;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+
+  min-height: 100vh;
+}
+
+@media (min-width: 37.5em) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 90rem;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+@media (min-width: 37.5em) {
+  .container {
+    width: 100%;
+  }
+}
+
+.card-container {
+  box-shadow: 0px 10px solid rgb(134, 133, 133);
+}
+
+.card-container section:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-container section:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+@media (min-width: 37.5em) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-container section:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .card-container section:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+.bg-primary {
+  background-color: hsl(var(--clr-primary));
+}
+.bg-primary-hover:hover {
+  background-color: hsl(var(--clr-primary));
+}
+.bg-secondary {
+  background-color: hsl(var(--clr-secondary));
+}
+.bg-secondary-hover:hover {
+  background-color: hsl(var(--clr-secondary));
+}
+.bg-tertiary {
+  background-color: hsl(var(--clr-tertiary));
+}
+.bg-tertiary-hover:hover {
+  background-color: hsl(var(--clr-tertiary));
+}
+.text-primary {
+  color: hsl(var(--clr-primary));
+}
+.text-secondary {
+  color: hsl(var(--clr-secondary));
+}
+.text-tertiary {
+  color: hsl(var(--clr-tertiary));
+}
+
+.btn {
+  background-color: hsl(0, 0%, 95%);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.btn:hover {
+  border: 2px solid currentColor;
+  border-color: currentColor;
+  color: white;
+}
+
+.card {
+  padding: 2.5rem 4rem 2.5rem 2.5rem;
+}
+
+.card > * {
+  margin-bottom: 3rem;
+}
+
+.card__icon--primary {
+  fill: hsl(var(--clr-primary));
+}
+
+.card__head {
+  color: hsl(0, 0%, 95%);
+}
+
+.card .card__para {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 6rem;
+  letter-spacing: 0.8px;
+  line-height: 1.6;
+}
